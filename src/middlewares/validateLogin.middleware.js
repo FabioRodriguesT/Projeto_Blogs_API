@@ -18,12 +18,12 @@ const isValidPassword = (password) => {
   }  
 };
 
-const isValidLogin = async (req, res, next) => {
+const isValidLogin = (req, res, next) => {
   const { email, password } = req.body;
   const errors = [];
 
-  errors.push(await isValidEmail(email));
-  errors.push(await isValidPassword(password));
+  errors.push(isValidEmail(email));
+  errors.push(isValidPassword(password));
 
   let indexOfArray;
   

@@ -1,14 +1,9 @@
 // preciso dizer de onde importo o login model
-const jwt = require('jsonwebtoken');
 const { User } = require('../models');
 
-const secret = process.env.JWT_SECRET || 'seusecretdetoken';
+const { createToken } = require('../utils/auth');
 
-const login = async (email, password) => {
-  const jwtConfig = {
-    algorithm: 'HS256',
-  };
-
+const login = async (email, password) => {  
   const user = await User.findOne({ where: { email, password } });
 
   if (!user) {
@@ -22,7 +17,7 @@ const login = async (email, password) => {
   //   password
   // }
 
-  const token = jwt.sign({ data: { userId: user.id } }, secret, jwtConfig);
+  const token = createToken({ userId: user.id });
   // const isValidToken = jwt.verify(token, secret);
 
   return ({ status: 'SUCCESSFUL', data: { token } }); 
