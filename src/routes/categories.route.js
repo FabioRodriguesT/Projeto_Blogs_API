@@ -5,6 +5,7 @@ const { isValidToken } = require('../middlewares/validateJWT.middleware');
 
 route.use(express.json());
 
+route.get('/categories', isValidToken, categoryController.getAllCategories);
 route.post('/categories', isValidToken, categoryController.createCategory);
 
 module.exports = route;
