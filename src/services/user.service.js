@@ -1,18 +1,10 @@
 const { User } = require('../models');
 const auth = require('../utils/auth');
+const { removePasswordFromUser } = require('../utils/removePasswordFromUser');
 
 const getAllUsers = async () => {
-  const result = await User.findAll();
-
-  const resultWithOutPassword = result.map((element) => {
-    const newObject = {
-      id: element.dataValues.id,
-      displayName: element.dataValues.displayName,
-      email: element.dataValues.email,
-      image: element.dataValues.image,
-    };
-    return newObject;
-  });
+  const result = await User.findAll(); 
+  const resultWithOutPassword = result.map(({ dataValues }) => removePasswordFromUser(dataValues));
 
   return ({ status: 'SUCCESSFUL', data: resultWithOutPassword });
 };
@@ -41,7 +33,18 @@ const createUser = async (
   return ({ status: 'CREATED', data: { token } });
 };
 
+const getUserById = async (id) => {
+  const result = await User.findOne({ where: { id } });
+  if (!result) {
+    return ({ status: 'NOT_FOUND', data: { message: 'User does not exist' } });
+  }  
+  const resultWithOutPassword = removePasswordFromUser(result.dataValues);
+
+  return ({ status: 'SUCCESSFUL', data: resultWithOutPassword });
+};
+
 module.exports = {
   getAllUsers,
   createUser,
+  getUserById,
 };
