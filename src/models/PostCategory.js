@@ -1,36 +1,69 @@
 const PostCategoryModel = (sequelize, DataTypes) => {
-  // post_id, category_id
   const PostCategory = sequelize.define('PostCategory', {
-    postId: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-    },
-    categoryId: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-    },
-  }, {
-    timestamps: false,
-    tableName: 'categories',
-    underscored: true,
-  });
-
+      postId: { type: DataTypes.INTEGER, foreignKey: true },
+      categoryId: { type: DataTypes.INTEGER, foreignKey: true }
+  },
+      {
+          timestamps: false,
+          underscored: true,
+          tableName: 'posts_categories'
+      }
+  );
   PostCategory.associate = (models) => {
-    models.BlogPost.belongsToMany(models.Category, {
-      as: 'categories',
-      through: PostCategory,
-      foreingKey: 'postId',
-      otherKey: 'categoryId',
-    });
-    models.Category.belongsToMany(models.BlogPost, {
-      as: 'users',
-      through: PostCategory,
-      foreingKey: 'postId',
-      otherKey: 'categoryId',
-    });
+      models.BlogPost.belongsToMany(models.Category, {
+          as: 'categories',
+          through: PostCategory,
+          foreignKey: 'postId',
+          otherKey: 'categoryId'
+      })
+      models.Category.belongsToMany(models.BlogPost, {
+          as: 'users',
+          through: PostCategory,
+          foreignKey: 'categoryId',
+          otherKey: 'postId',
+      })
   };
 
+
   return PostCategory;
-};
+}
 
 module.exports = PostCategoryModel;
+
+
+// const PostCategoryModel = (sequelize, DataTypes) => {
+//   // post_id, category_id
+//   const PostCategory = sequelize.define('PostCategory', {
+//     postId: {
+//       type: DataTypes.INTEGER,
+//       foreignKey: true,
+//     },
+//     categoryId: {
+//       type: DataTypes.INTEGER,
+//       foreignKey: true,
+//     },
+//   }, {
+//     timestamps: false,
+//     tableName: 'posts_categories',
+//     underscored: true,
+//   });
+
+//   PostCategory.associate = (models) => {
+//     models.BlogPost.belongsToMany(models.Category, {
+//       as: 'categories',
+//       through: PostCategory,
+//       foreignKey: 'postId',
+//       otherKey: 'categoryId',
+//     })
+//     models.Category.belongsToMany(models.BlogPost, {
+//       as: 'users',
+//       through: PostCategory,
+//       foreignKey: 'categoryId',
+//       otherKey: 'postId',
+//     })
+//   };
+
+//   return PostCategory;
+// };
+
+// module.exports = PostCategoryModel;
