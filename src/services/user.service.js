@@ -1,5 +1,21 @@
 const { User } = require('../models');
-const { createToken } = require('../utils/auth');
+const auth = require('../utils/auth');
+
+const getAllUsers = async () => {
+  const result = await User.findAll();
+
+  const resultWithOutPassword = result.map((element) => {
+    const newObject = {
+      id: element.dataValues.id,
+      displayName: element.dataValues.displayName,
+      email: element.dataValues.email,
+      image: element.dataValues.image,
+    };
+    return newObject;
+  });
+
+  return ({ status: 'SUCCESSFUL', data: resultWithOutPassword });
+};
 
 const createUser = async (
   displayName, 
@@ -20,11 +36,12 @@ const createUser = async (
   // create token
   const { id } = await User.findOne({ where: { email } });
 
-  const token = createToken({ id });
+  const token = auth.createToken({ id });
   // fim create token
   return ({ status: 'CREATED', data: { token } });
 };
 
 module.exports = {
+  getAllUsers,
   createUser,
 };
