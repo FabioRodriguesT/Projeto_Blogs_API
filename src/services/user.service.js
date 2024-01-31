@@ -27,7 +27,6 @@ const createUser = async (
   }, { fields: ['displayName', 'email', 'password', 'image'] }); 
   // create token
   const { id } = await User.findOne({ where: { email } });
-
   const token = auth.createToken({ id });
   // fim create token
   return ({ status: 'CREATED', data: { token } });

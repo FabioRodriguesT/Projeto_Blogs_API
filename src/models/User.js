@@ -47,13 +47,13 @@ const UserModel = (sequelize, DataTypes) => {
     underscored: true
   });
 
-  // User.associate = (models) => {
-  //   User.hasMany(models.BlogPost),
-  //   {
-  //     foreingKey: 'userId',
-  //     as: 'blog_posts'
-  //   }
-  // }
+  User.associate = (models) => {
+    User.hasMany(models.BlogPost,
+      {
+        foreingKey: 'userId',
+        as: 'blog_posts'
+      })
+  }
 
   return User;
 };
