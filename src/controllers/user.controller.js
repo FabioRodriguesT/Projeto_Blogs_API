@@ -1,7 +1,5 @@
 const { userService } = require('../services');
 const mapStatusHTTP = require('../utils/mapStatusHTTP');
-const auth = require('../utils/auth');
-// const { User } = require('../models');
 
 const createUser = async (req, res) => {
   const {
