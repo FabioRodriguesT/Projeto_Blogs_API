@@ -6,11 +6,12 @@ const getAllPosts = async (__req, res) => {
 
   return res.status(mapStatusHTTP(status)).json(data);
 };
-// const getPostById = async (req, res) => {
-//   const { id } = req.params;
-//   const { status, data } = await postService.getPostById(id);
-//   return res.status(mapStatusHTTP(status)).json(data);
-// };
+
+const getPostById = async (req, res) => {
+  const { id } = req.params;
+  const { status, data } = await postService.getPostById(id);
+  return res.status(mapStatusHTTP(status)).json(data);
+};
 
 const createPost = async (req, res) => {
   const { userId } = req; // vem do middleware de validação do token.
@@ -26,7 +27,7 @@ const createPost = async (req, res) => {
 
 module.exports = {
   getAllPosts,
-  // getPostById,
+  getPostById,
   createPost,
   // editAPost,
 };

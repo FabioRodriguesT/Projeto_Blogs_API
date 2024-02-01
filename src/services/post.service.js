@@ -1,27 +1,32 @@
-/* eslint-disable max-lines-per-function */
 const { BlogPost, User, Category, PostCategory } = require('../models');
-const { removePasswordFromUser } = require('../utils/removePasswordFromUser');
 
 const getAllPost = async () => {
   const result = await BlogPost.findAll({
-    include: [{ model: User, as: 'user' }, {
+    include: [{ model: User, as: 'user', attributes: { exclude: ['password'] } }, {
+      model: Category,
+      as: 'categories',
+      through: { attributes: [] },
+    }],
+  }); 
+
+  return ({ status: 'SUCCESSFUL', data: result });
+};
+
+const getPostById = async (id) => {
+  const post = await BlogPost.findOne({ where: { id } });
+
+  if (!post) { return { status: 'NOT_FOUND', data: { message: 'Post does not exist' } }; }
+
+  const post2 = await BlogPost.findOne({
+    include: [{ model: User, as: 'user', attributes: { exclude: ['password'] } }, {
       model: Category,
       as: 'categories',
       through: { attributes: [] },
     }],
   });
- 
-  result.forEach((element) => {
-    const { user } = element.dataValues; 
-    user.dataValues = removePasswordFromUser(user.dataValues);
-  });  
 
-  return ({ status: 'SUCCESSFUL', data: result });
+  return ({ status: 'SUCCESSFUL', data: post2 });
 };
-
-// const getPostById = async (id) => {
-
-// };
 
 const createPost = async (title, content, categoryIds, userId) => {
   const post = await BlogPost.create({ title, content, userId });
@@ -42,7 +47,7 @@ const createPost = async (title, content, categoryIds, userId) => {
 
 module.exports = {
   getAllPost,
-  // getPostById,
+  getPostById,
   createPost,
   // editAPost,
 };
