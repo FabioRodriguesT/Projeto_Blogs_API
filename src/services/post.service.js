@@ -1,4 +1,3 @@
-/* eslint-disable max-lines */
 const { BlogPost, User, Category, PostCategory } = require('../models');
 
 const getAllPost = async () => {
@@ -50,7 +49,6 @@ const editAPost = async (id, userId, title, content) => {
   }
  
   await result.update({ title, content });
-
   await result.save();
 
   const resultPost = await getPostById(id);
