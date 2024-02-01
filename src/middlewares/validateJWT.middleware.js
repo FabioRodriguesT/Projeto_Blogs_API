@@ -3,11 +3,10 @@ const auth = require('../utils/auth');
 
 const isValidToken = (req, res, next) => {
   const bearerToken = req.header('Authorization');
-  const token = bearerToken.split(' ')[1];
-
   if (!bearerToken) {
     return res.status(mapStatusHTTP('UNAUTHORIZED')).json({ message: 'Token not found' });
   }
+  const token = bearerToken.split(' ')[1];
 
   try {
     const decoded = auth.verify(token);

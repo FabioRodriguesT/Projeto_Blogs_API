@@ -1,5 +1,5 @@
 /* eslint-disable max-lines-per-function */
-const { BlogPost, User, Category } = require('../models');
+const { BlogPost, User, Category, PostCategory } = require('../models');
 const { removePasswordFromUser } = require('../utils/removePasswordFromUser');
 
 const getAllPost = async () => {
@@ -10,35 +10,31 @@ const getAllPost = async () => {
       through: { attributes: [] },
     }],
   });
+ 
+  result.forEach((element) => {
+    const { user } = element.dataValues; 
+    user.dataValues = removePasswordFromUser(user.dataValues);
+  });  
 
-  // const allPosts = await BlogPost.findAll({
-  //   include: [{ model: User, as: 'user' }, 
-  //     { model: Category,
-  //       as: 'categories', 
-  //       through: { attributes: [] } }],
-  // });
-
-  const resultWithoutPassword = result.map((element) => 
-    removePasswordFromUser(element.dataValues.user.dataValues));
-
-  const result2 = result.map((element2, index) => {
-    const result3 = element2;
-    result3.dataValues.user.dataValues = resultWithoutPassword[index];
-    return result3;
-  });
-
-  // console.log('ENTROU AKI', result2); 
-
-  return ({ status: 'SUCCESSFUL', data: result2 });
+  return ({ status: 'SUCCESSFUL', data: result });
 };
 
 // const getPostById = async (id) => {
 
 // };
 
-// const createPost = async () => {
+const createPost = async (title, content, categoryIds, userId) => {
+  const post = await BlogPost.create({ title, content, userId });
 
-// };
+  const resultMap = categoryIds.map((categoryId) => ({
+    postId: post.id,
+    categoryId,
+  }));
+ 
+  await PostCategory.bulkCreate(resultMap);
+  
+  return ({ status: 'CREATED', data: post });
+};
 
 // const editAPost = async () => {
 
@@ -47,6 +43,6 @@ const getAllPost = async () => {
 module.exports = {
   getAllPost,
   // getPostById,
-  // createPost,
+  createPost,
   // editAPost,
 };

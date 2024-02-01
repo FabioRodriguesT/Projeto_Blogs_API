@@ -5,6 +5,7 @@ const BlogPostModel = (sequelize, DataTypes) => {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
+      autoIncrement: true,      
     },
     title: {
       type: DataTypes.STRING,
@@ -17,10 +18,12 @@ const BlogPostModel = (sequelize, DataTypes) => {
       foreignKey: true,
     },
     published: {
-      type: DataTypes.DATE
+      type: DataTypes.DATE,
+      defaultValue: DataTypes.NOW
     },
     updated: {
-      type: DataTypes.DATE
+      type: DataTypes.DATE,
+      defaultValue: DataTypes.NOW
     }
   },
   {
