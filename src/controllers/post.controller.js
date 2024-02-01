@@ -20,14 +20,19 @@ const createPost = async (req, res) => {
   const { status, data } = await postService.createPost(title, content, categoryIds, userId);
   return res.status(mapStatusHTTP(status)).json(data);
 };
-// const editAPost = async (req, res) => {
-//   const { status, data } = await postService.editAPost();
-//   return res.status(mapStatusHTTP(status)).json(data);
-// };
+
+const editAPost = async (req, res) => {
+  const { id } = req.params;
+  const { title, content } = req.body;
+  const { userId } = req;
+
+  const { status, data } = await postService.editAPost(id, userId, title, content);
+  return res.status(mapStatusHTTP(status)).json(data);
+};
 
 module.exports = {
   getAllPosts,
   getPostById,
   createPost,
-  // editAPost,
+  editAPost,
 };

@@ -53,4 +53,6 @@ const isValidCreatePost = async (req, res, next) => {
 
 module.exports = {
   isValidCreatePost,
+  isValidFields,
+  isValidCategory,
 };

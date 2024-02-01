@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 const { BlogPost, User, Category, PostCategory } = require('../models');
 
 const getAllPost = async () => {
@@ -41,13 +42,21 @@ const createPost = async (title, content, categoryIds, userId) => {
   return ({ status: 'CREATED', data: post });
 };
 
-// const editAPost = async () => {
+const editAPost = async (id, userId, title, content) => {
+  const result = await BlogPost.findOne({ where: { id } });
 
-// };
+  if (result.userId !== userId) {
+    return { status: 'UNAUTHORIZED', data: { message: 'Unauthorized user' } }; 
+  }
+ 
+  await result.update({ title, content });
 
+  await result.save();
+
+  const resultPost = await getPostById(id);
+  return { status: 'SUCCESSFUL', data: resultPost.data };
+};
+  
 module.exports = {
-  getAllPost,
-  getPostById,
-  createPost,
-  // editAPost,
+  getAllPost, getPostById, createPost, editAPost,
 };
