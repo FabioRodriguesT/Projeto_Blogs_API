@@ -30,9 +30,28 @@ const editAPost = async (req, res) => {
   return res.status(mapStatusHTTP(status)).json(data);
 };
 
+const deleteAPost = async (req, res) => {
+  const { id } = req.params;
+  const { userId } = req;
+
+  const { status, data } = await postService.deletaAPost(id, userId);
+
+  return res.status(mapStatusHTTP(status)).json(data);
+};
+
+const getPostBySearchTerm = async (req, res) => {
+  const searchTerm = req.query.q;
+
+  const { status, data } = await postService.searchPost(searchTerm);
+
+  return res.status(mapStatusHTTP(status)).json(data);
+};
+
 module.exports = {
   getAllPosts,
   getPostById,
   createPost,
   editAPost,
+  deleteAPost,
+  getPostBySearchTerm,
 };

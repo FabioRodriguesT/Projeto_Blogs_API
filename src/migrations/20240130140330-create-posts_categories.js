@@ -14,6 +14,7 @@ module.exports = {
           model: 'blog_posts',
           key: 'id',
         },
+        onDelete: 'cascade',
       },
       category_id: {
         allowNull: false,

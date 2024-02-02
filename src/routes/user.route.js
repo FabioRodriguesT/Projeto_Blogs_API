@@ -10,5 +10,6 @@ route.use(express.json());
 route.get('/user', isValidToken, userController.getUsers);
 route.get('/user/:id', isValidToken, userController.getUserById);
 route.post('/user', isValidCreateUser, userController.createUser);
+route.delete('/user/me', isValidToken, userController.deleteUser);
 
 module.exports = route;

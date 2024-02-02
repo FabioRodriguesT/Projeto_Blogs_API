@@ -27,7 +27,7 @@ const createUser = async (
   }, { fields: ['displayName', 'email', 'password', 'image'] }); 
   // create token
   const { id } = await User.findOne({ where: { email } });
-  const token = auth.createToken({ id });
+  const token = auth.createToken({ userId: id });
   // fim create token
   return ({ status: 'CREATED', data: { token } });
 };
@@ -42,8 +42,14 @@ const getUserById = async (id) => {
   return ({ status: 'SUCCESSFUL', data: resultWithOutPassword });
 };
 
+const deleteAUserByID = async (id) => {
+  await User.destroy({ where: { id } });
+  return ({ status: 'NO_CONTENT' });
+};
+
 module.exports = {
   getAllUsers,
   createUser,
   getUserById,
+  deleteAUserByID,
 };
