@@ -5,6 +5,14 @@ a autenticação do usuário por meio de JSON Web Tokens (JWT).
 Também utilizamos a arquitetura de software MSC (Model-Service-Controller).
 Este projeto demonstra uma sólida compreensão do design de API RESTful e gerenciamento de banco de dados.
 
+# Table of Contents
+1. [Diagrama de Entidade-Relacionamento](#Diagrama de Entidade-Relacionamento)
+2. [Example2](#example2)
+3. [Third Example](#third-example)
+4. [Dependências](##Dependências)
+
+
+
  ## Diagrama de Entidade-Relacionamento
 Para orientar a construção das tabelas através do ORM, utilize o DER a seguir:
 
