@@ -7,7 +7,7 @@ Este projeto demonstra uma sólida compreensão do design de API RESTful e geren
 
 # Sumário
 1. [Diagrama de Entidade-Relacionamento](#Diagrama-de-Entidade-Relacionamento)
-2. [Sobre o projeto](#Sobre-o-projeto)
+2. [Sobre o projeto](#Sobre-o-projeto:)
 3. [Instalação:](#Instalação:)
 4. [Utilizando a API:](#Utilizando-a-API:)
 5. [Instruções de utilização do projeto:](#Instruções-de-utilização-do-projeto:)
