@@ -247,7 +247,7 @@ Com o seu Token gerado, antes de fazer a requisição para qualquer rota, você 
 
 Este projeto utilizou os seguintes pacotes:
 
- ###Dependências:###
+### Dependências: ###
 <ul> 
   <li>express: Web framework for Node.js.</li>
   <li>express-async-errors: Middleware to handle async errors.</li>
@@ -257,7 +257,7 @@ Este projeto utilizou os seguintes pacotes:
   <li>sequelize: ORM for managing SQL databases.</li> 
 </ul>
 
-###Dependências de desenvolvimento:###
+### Dependências de desenvolvimento: ###
 <ul>
   <li>chai: Assertion library.</li>
   <li>chai-http: HTTP integration testing for Chai.</li>
