@@ -147,83 +147,84 @@ Com o seu Token gerado, antes de fazer a requisição para qualquer rota, você 
 </ol>
 
 ### Rotas disponíveis:
-<p>&emsp hello</p>
-<table> 
- <thead>
-  <th>Rota</th>
-  <th>Funcionalidade</th>
-  <th>Tipo da Requisição</th>
- </thead>
- <tbody>
+<ol>
+ <table> 
+  <thead>
+   <th>Rota</th>
+   <th>Funcionalidade</th>
+   <th>Tipo da Requisição</th>
+  </thead>
+  <tbody>
+   
+   <tr>
+    <th>/login</th>
+    <td>Login na API com geração de token</td>
+    <td>POST</td>
+   </tr>
+   
+   <tr>
+    <th>/user</th>
+    <td>Cria um novo usuário</td>
+    <td>POST</td>
+   </tr>
+   
+   <tr>
+    <th>/categories</th>
+    <td>Cria uma nova categoria de Post</td>
+    <td>POST</td>
+   </tr>
   
-  <tr>
-   <th>/login</th>
-   <td>Login na API com geração de token</td>
-   <td>POST</td>
-  </tr>
+   <tr>
+    <th>/categories</th>
+    <td>Lista todas as categorias</td>
+    <td>GET</td>
+   </tr>
   
-  <tr>
-   <th>/user</th>
-   <td>Cria um novo usuário</td>
-   <td>POST</td>
-  </tr>
+   <tr>
+    <th>/post</th>
+    <td>Lista todos os posts</td>
+    <td>GET</td>
+   </tr> 
   
-  <tr>
-   <th>/categories</th>
-   <td>Cria uma nova categoria de Post</td>
-   <td>POST</td>
-  </tr>
- 
-  <tr>
-   <th>/categories</th>
-   <td>Lista todas as categorias</td>
-   <td>GET</td>
-  </tr>
- 
-  <tr>
-   <th>/post</th>
-   <td>Lista todos os posts</td>
-   <td>GET</td>
-  </tr> 
- 
-  <tr>
-   <th>/post/:id</th>
-   <td>Lista o post com o id específico</td>
-   <td>GET</td>
-  </tr>
- 
-  <tr>
-   <th>/post</th>
-   <td>Cria um novo post</td>
-   <td>POST</td>
-  </tr>
- 
-  <tr>
-   <th>/post/:id</th>
-   <td>Edita um post com o id específico</td>
-   <td>PUT</td>
-  </tr>
- 
-  <tr>
-   <th>/post/:id</th>
-   <td>Exclui um post com o id específico</td>
-   <td>DELETE</td>
-  </tr>
- 
-  <tr>
-   <th>/user</th>
-   <td>Lista todos os usuários</td>
-   <td>GET</td>
-  </tr>  
- 
-  <tr>
-   <th>/user/:id</th>
-   <td>Lista um usuário com id específico</td>
-   <td>GET</td>
-  </tr>
+   <tr>
+    <th>/post/:id</th>
+    <td>Lista o post com o id específico</td>
+    <td>GET</td>
+   </tr>
   
- </tbody>
-</table>
+   <tr>
+    <th>/post</th>
+    <td>Cria um novo post</td>
+    <td>POST</td>
+   </tr>
+  
+   <tr>
+    <th>/post/:id</th>
+    <td>Edita um post com o id específico</td>
+    <td>PUT</td>
+   </tr>
+  
+   <tr>
+    <th>/post/:id</th>
+    <td>Exclui um post com o id específico</td>
+    <td>DELETE</td>
+   </tr>
+  
+   <tr>
+    <th>/user</th>
+    <td>Lista todos os usuários</td>
+    <td>GET</td>
+   </tr>  
+  
+   <tr>
+    <th>/user/:id</th>
+    <td>Lista um usuário com id específico</td>
+    <td>GET</td>
+   </tr>
+   
+  </tbody>
+ </table>
+</ol>
 
 ### Utilização:
 
