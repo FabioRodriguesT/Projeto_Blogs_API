@@ -139,7 +139,7 @@ Este projeto utilizou os seguintes pacotes:
   <li>wait-on: Wait for a resource to be available.</li>
 </ul>
 
-## License
+## Licença
 
 <p>Este projeto é licenciado sob a Licença MIT. Boa codificação!</p>
 
