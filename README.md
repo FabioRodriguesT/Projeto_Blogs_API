@@ -8,12 +8,15 @@ Este projeto demonstra uma sólida compreensão do design de API RESTful e geren
 # Sumário
 1. [Diagrama de Entidade-Relacionamento](#Diagrama-de-Entidade-Relacionamento)
 2. [Sobre o projeto](#Sobre-o-projeto)
-3. [Third Example](#third-example)
-4. [Dependências](#Dependências)
+3. [Instalação:](#Instalação:)
+4. [Utilizando a API:](#Utilizando-a-API:)
+5. [Instruções de utilização do projeto:](#Instruções-de-utilização-do-projeto:)
+6. [Dependências:](#Dependências:)
+7. [Licençã:](#Licença:)
 
 
 
-## Diagrama de Entidade-Relacionamento
+## Diagrama de Entidade-Relacionamento:
 Para orientar a construção das tabelas através do ORM, utilize o DER a seguir:
 
  ![Diagrama de Entidade do Blogs-API](./blogs_api_database.png)
@@ -43,7 +46,7 @@ Para orientar a construção das tabelas através do ORM, utilize o DER a seguir
 
 #### :heavy_exclamation_mark:ATENÇÃO!:heavy_exclamation_mark:: Todos os arquivos que não foram mencionados, foram criados pela Trybe! :white_check_mark:
 
-## Instalação
+## Instalação:
 
 Para a configuração do projeto, siga esses passos:
 
@@ -74,7 +77,7 @@ Para a configuração do projeto, siga esses passos:
  </li> 
 </ol>
 
-## Utilizando a API
+## Utilizando a API:
 
 Você pode executar a API utilizando npm ou Docker.
 
@@ -240,7 +243,7 @@ Com o seu Token gerado, antes de fazer a requisição para qualquer rota, você 
 
 <p> Exemplo: ThunderClient, Insomnia, entre outros.</p>
 
-## Dependências
+## Dependências:
 
 Este projeto utilizou os seguintes pacotes:
 
@@ -271,7 +274,7 @@ Este projeto utilizou os seguintes pacotes:
   <li>wait-on: Wait for a resource to be available.</li>
 </ul>
 
-## Licença
+## Licença:
 
 <p>Este projeto é licenciado sob a Licença MIT. Boa codificação!</p>
 
