@@ -66,6 +66,18 @@ Para a configuração do projeto, siga esses passos:
  </li> 
 </ol>
 
+## Utilizando a API
+
+Você pode executar a API utilizando npm ou Docker.
+
+### Utilizando npm
+
+Para executar a API, use o seguinte comando:
+
+```bash
+npm run dev
+```
+Você pode então acessar a API em `http://localhost:3000` (ou utilizando sua porta específica).
 
 ### Utilizando o Docker
 
