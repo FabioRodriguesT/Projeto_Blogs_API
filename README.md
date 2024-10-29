@@ -8,26 +8,59 @@ Este projeto demonstra uma sólida compreensão do design de API RESTful e geren
  ## Diagrama de Entidade-Relacionamento
 Para orientar a construção das tabelas através do ORM, utilize o DER a seguir:
 
- ![Banco Blogs-API](./blogs_api_database.png)
+ ![Diagrama de Entidade do Blogs-API](./blogs_api_database.png)
 
  ## Sobre o projeto:
-   <summary><strong>O que foi desenvolvido:</strong></summary>  
+ ### O que foi desenvolvido:
+ <ol>  
+  <li><p>Endpoints que estão conectados ao banco de dados seguindo os princípios do REST.</p></li>
+ 
+  <li><p>Criação de um post, necessitando da relação entre usuário e login, sendo **relação (1:N) entre** `user` e `blog_posts`.</p></li>  
+ 
+  <li><p>Separamos os post por categorias, com a **relação (N:N) de** `blog_posts` para `categories` e de `categories` para `blog_posts`.</p></li>
+ 
+  <li><p>Arquivos ou Pastas que foram desenvolvidos:
+   <ul>
+      <li>Controllers;</li>
+      <li>Middlewares;</li>
+      <li>Migrations;</li>
+      <li>Services;</li>
+      <li>Models;</li>
+      <li>Utils;</li>
+      <li>App.js</li>
+   </ul>
+   </p>
+  </li>
+ </ol>
 
-  1. Endpoints que estão conectados ao banco de dados seguindo os princípios do REST;
+#### :heavy_exclamation_mark:ATENÇÃO!:heavy_exclamation_mark:: Todos os arquivos que não foram mencionados, foram criados pela Trybe! :white_check_mark:
 
-  2. Criação de um post, necessitando da relação entre usuário e login, sendo **relação (1:N) entre** `user` e `blog_posts`; 
+## Instalação
 
-  3. Separamos os post por categorias, com a **relação (N:N) de** `blog_posts` para `categories` e de `categories` para `blog_posts`.
+Para a configuração do projeto, siga esses passos:
 
-  4. Arquivos dentro da pasta src que foram desenvolvidos: 
-     - A pasta controllers;
-     - A pasta de middlewares;
-     - A pasta de migrations;
-     - A pasta de services;
-     - A pasta models;
-     - A pasta utils;
-     - As rotas da API dentro do arquivo app.js
+<ol>
+ <li>
+  <p>Clone o Repositório:</p>
 
-### :heavy_exclamation_mark:ATENÇÃO!:heavy_exclamation_mark:: Todos os arquivos que não foram mencionados, foram criados pela Trybe! :white_check_mark:
-
-<br />
+  ```bash
+   git clone <repository-url>
+   cd blogs-api
+  ``` 
+ </li>
+ <li>
+  <p>Instale as dependências:</p>
+  
+  ```bash
+   git clone <repository-url>
+   cd blogs-api
+   ``` 
+ </li>
+ <li>
+  <p>Configure seu banco de dados com as migrações e modelos necessários:</p>
+  
+  ```bash
+   npm run prestart
+   ```
+ </li> 
+</ol>
