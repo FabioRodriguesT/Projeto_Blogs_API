@@ -11,7 +11,7 @@ Para orientar a construção das tabelas através do ORM, utilize o DER a seguir
  ![Banco Blogs-API](./blogs_api_database.png)
 
  ## Sobre o projeto:
-  <summary><strong>O que foi desenvolvido:</strong></summary>  
+   <summary><strong>O que foi desenvolvido:</strong></summary>  
 
   1. Endpoints que estão conectados ao banco de dados seguindo os princípios do REST;
 
