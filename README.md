@@ -108,6 +108,129 @@ Você pode então acessar a API em `http://localhost:3000` (ou utilizando sua po
  </li>
 </ol>
 
+## Instruções de utilização do projeto:
+- ⚠️ A maioria das rotas necessitam de um token gerado pela rota post de /login para authenticação.
+
+### Gerando seu token:
+<ol>
+ <li> Ao fazer uma requisição para a rota POST /login, com email e password, será gerado um token para você. Exemplo:</li>
+
+ ```bash
+ {
+  "email": "seuemail@exemplo.com",
+  "password": "suasenha"
+ }
+ ```
+
+<li> Ao realizar um login correto (como o exemplo), na rota, será retornado um token:</li>
+   </br>
+   <p>Exemplo:</p>
+
+```bash
+ {
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjo1LCJkaXNwbGF5TmFtZSI6InVzdWFyaW8gZGUgdGVzdGUiLCJlbWFpbCI6InRlc3RlQGVtYWlsLmNvbSIsImltYWdlIjoibnVsbCJ9LCJpYXQiOjE2MjAyNDQxODcsImV4cCI6MTYyMDY3NjE4N30.Roc4byj6mYakYqd9LTCozU1hd9k_Vw5I WKGL4hcCVG8"
+ }
+ ```
+</ol>
+
+### Utilizando o token:
+Com o seu Token gerado, antes de fazer a requisição para qualquer rota, você deve utilizá-lo no header de sua requisição.
+
+<ol>
+ <li>Crie uma variavel em sua rota chamanda de "Authorization".</li>
+ <li>Adicione o valor do seu token gerado na sua variavel Authorization, no formato de Bearer seu Token.</li>
+ 
+```bash
+  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjo1LCJkaXNwbGF5TmFtZSI6InVzdWFyaW8gZGUgdGVzdGUiLCJlbWFpbCI6InRlc3RlQGVtYWlsLmNvbSIsImltYWdlIjoibnVsbCJ9LCJpYXQiOjE2MjAyNDQxODcsImV4cCI6MTYyMDY3NjE4N30.Roc4byj6mYakYqd9LTCozU1hd9k_Vw5IWKGL4hcCVG8
+```
+ <li>Assim, você está authenticado, permitindo a realização de requisições para todos os endpoints!</li>
+</ol>
+
+### Rotas disponíveis:
+<p>&emsp hello</p>
+<table> 
+ <thead>
+  <th>Rota</th>
+  <th>Funcionalidade</th>
+  <th>Tipo da Requisição</th>
+ </thead>
+ <tbody>
+  
+  <tr>
+   <th>/login</th>
+   <td>Login na API com geração de token</td>
+   <td>POST</td>
+  </tr>
+  
+  <tr>
+   <th>/user</th>
+   <td>Cria um novo usuário</td>
+   <td>POST</td>
+  </tr>
+  
+  <tr>
+   <th>/categories</th>
+   <td>Cria uma nova categoria de Post</td>
+   <td>POST</td>
+  </tr>
+ 
+  <tr>
+   <th>/categories</th>
+   <td>Lista todas as categorias</td>
+   <td>GET</td>
+  </tr>
+ 
+  <tr>
+   <th>/post</th>
+   <td>Lista todos os posts</td>
+   <td>GET</td>
+  </tr> 
+ 
+  <tr>
+   <th>/post/:id</th>
+   <td>Lista o post com o id específico</td>
+   <td>GET</td>
+  </tr>
+ 
+  <tr>
+   <th>/post</th>
+   <td>Cria um novo post</td>
+   <td>POST</td>
+  </tr>
+ 
+  <tr>
+   <th>/post/:id</th>
+   <td>Edita um post com o id específico</td>
+   <td>PUT</td>
+  </tr>
+ 
+  <tr>
+   <th>/post/:id</th>
+   <td>Exclui um post com o id específico</td>
+   <td>DELETE</td>
+  </tr>
+ 
+  <tr>
+   <th>/user</th>
+   <td>Lista todos os usuários</td>
+   <td>GET</td>
+  </tr>  
+ 
+  <tr>
+   <th>/user/:id</th>
+   <td>Lista um usuário com id específico</td>
+   <td>GET</td>
+  </tr>
+  
+ </tbody>
+</table>
+
+### Utilização:
+
+<p>Utilize algum aplicativo ou extensão do VSCode para realizar as requisições. </p>
+
+<p> Exemplo: ThunderClient, Insomnia, entre outros.</p>
+
 ## Dependências
 
 Este projeto utilizou os seguintes pacotes:
