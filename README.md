@@ -9,7 +9,7 @@ Este projeto demonstra uma sólida compreensão do design de API RESTful e geren
 1. [Diagrama de Entidade-Relacionamento](#Diagrama de Entidade-Relacionamento)
 2. [Example2](#example2)
 3. [Third Example](#third-example)
-4. [Dependências](##Dependências)
+4. [Dependências](#Dependências)
 
 
 
