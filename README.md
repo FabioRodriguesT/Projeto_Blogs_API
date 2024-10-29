@@ -107,3 +107,41 @@ Você pode então acessar a API em `http://localhost:3000` (ou utilizando sua po
    ```
  </li>
 </ol>
+
+## Dependências
+
+Este projeto utilizou os seguintes pacotes:
+
+ <h4>Dependências:</h4>
+<ul> 
+  <li>express: Web framework for Node.js.</li>
+  <li>express-async-errors: Middleware to handle async errors.</li>
+  <li>joi: Data validation library.</li>
+  <li>jsonwebtoken: For handling JWT authentication.</li>
+  <li>mysql2: MySQL client for Node.js.</li>
+  <li>sequelize: ORM for managing SQL databases.</li> 
+</ul>
+
+<h4> Dependências de desenvolvimento:</h4>
+<ul>
+  <li>chai: Assertion library.</li>
+  <li>chai-http: HTTP integration testing for Chai.</li>
+  <li>change-case: Utilities for changing case of strings.</li>
+  <li>eslint-config-trybe-backend: ESLint configuration.</li>
+  <li>frisby: API testing framework.</li>
+  <li>jest: JavaScript testing framework.</li>
+  <li>mocha: Test framework.</li>
+  <li>nodemon: Auto-restart for Node.js applications.</li>
+  <li>nyc: Code coverage tool.</li>
+  <li>sequelize-cli: CLI for Sequelize.</li>
+  <li>sinon: Standalone test spies, stubs, and mocks.</li>
+  <li>supertest: Testing HTTP servers.</li>
+  <li>wait-on: Wait for a resource to be available.</li>
+</ul>
+
+## License
+
+<p>Este projeto é licenciado sob a Licença MIT. Boa codificação!</p>
+
+
+
