@@ -57,10 +57,43 @@ Para a configuração do projeto, siga esses passos:
    ``` 
  </li>
  <li>
-  <p>Configure seu banco de dados com as migrações e modelos necessários:</p>
+  <p>
+   Configure seu banco de dados com as migrações e modelos necessários:
+  </p>
   
   ```bash
    npm run prestart
    ```
  </li> 
+</ol>
+
+
+### Utilizando o Docker
+
+<ol>
+ <li>
+  <p><strong>Construa e execute os contêineres do Docker:</strong></p>
+  
+   ```bash
+   docker-compose up -d
+   ```
+ </li>
+   
+<li>
+ <p>  
+  <strong>Acesse a Api:</strong>  Você pode acessar a API no caminho `http://localhost:3001` (ou utilizando sua porta específica).
+ </p>
+
+ </li>
+
+<li>
+ <p>
+  <strong>Acesse o container usando:</strong>  
+ </p>
+ 
+   ```bash
+   docker exec -it blogs_api bash
+   ```
+
+ </li>
 </ol>
