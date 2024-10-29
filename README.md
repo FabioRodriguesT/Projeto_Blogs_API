@@ -44,7 +44,7 @@ Para a configuração do projeto, siga esses passos:
   <p>Clone o Repositório:</p>
 
   ```bash
-   git clone <repository-url>
+   git clone git@github.com:FabioRodriguesT/Projeto_Blogs_API.git
    cd blogs-api
   ``` 
  </li>
@@ -52,8 +52,7 @@ Para a configuração do projeto, siga esses passos:
   <p>Instale as dependências:</p>
   
   ```bash
-   git clone <repository-url>
-   cd blogs-api
+   npm install
    ``` 
  </li>
  <li>
