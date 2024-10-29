@@ -11,7 +11,7 @@ Este projeto demonstra uma sólida compreensão do design de API RESTful e geren
 3. [Instalação](#Instalação)
 4. [Utilizando a API](#Utilizando-a-API)
 5. [Instruções de utilização do projeto](#Instruções-de-utilização-do-projeto)
-6. [Dependências:](#Dependências)
+6. [Dependências](#Dependências)
 7. [Licençã](#Licença)
 
 
