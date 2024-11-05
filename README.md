@@ -12,7 +12,7 @@ Este projeto demonstra uma sólida compreensão do design de API RESTful e geren
 - [Utilizando a API](#Utilizando-a-API)
 - [Instruções de utilização do projeto](#Instruções-de-utilização-do-projeto)
 - [Dependências](#Dependências)
-- [Licençs](#Licença)
+- [Licença](#Licença)
 
 
 
