@@ -16,7 +16,7 @@ Este projeto demonstra uma sólida compreensão do design de API RESTful e geren
 
 
 
-## Diagrama de Entidade-Relacionamento:
+## Diagrama de Entidade Relacionamento:
 Para orientar a construção das tabelas através do ORM, utilize o DER a seguir:
 
  ![Diagrama de Entidade do Blogs-API](./blogs_api_database.png)
