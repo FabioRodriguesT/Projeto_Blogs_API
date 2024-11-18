@@ -6,7 +6,7 @@ Também utilizamos a arquitetura de software MSC (Model-Service-Controller).
 Este projeto demonstra uma sólida compreensão do design de API RESTful e gerenciamento de banco de dados.
 
 ## Sumário
-- [Diagrama de Entidade Relacionamento](#Diagrama-de-Entidade-e-Relacionamento)
+- [Diagrama de Entidade e Relacionamento](#Diagrama-de-Entidade-e-Relacionamento)
 - [Sobre o projeto](#Sobre-o-projeto)
 - [Instalação](#Instalação)
 - [Utilizando a API](#Utilizando-a-API)
