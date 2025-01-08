@@ -103,11 +103,11 @@ docker exec -it blogs_api bash
 ```
 
 ## Instruções de utilização do projeto:
-- ⚠️ A maioria das rotas necessitam de um token gerado pela rota POST de /login para authenticação.
+- ⚠️ A maioria das rotas necessitam de um token gerado pela rota POST de `/login` para authenticação.
 
 ### Gerando seu token:
 
-Ao fazer uma requisição para a rota POST /login, com email e password, será gerado um token para você. Exemplo:
+Ao fazer uma requisição para a rota POST `/login`, com email e senha, será gerado um token para você. Exemplo:
 
 ```bash
 {
@@ -125,7 +125,7 @@ Ao realizar um login correto (como o exemplo), na rota, será retornado um token
  ```
 
 ### Utilizando o token:
-Com o seu Token gerado, antes de fazer a requisição para qualquer rota, você deve utilizá-lo no header de sua requisição.
+Com o seu token gerado, antes de fazer a requisição para qualquer rota, você deve utilizá-lo no `header`  de sua requisição.
 
 Crie uma variavel em sua rota chamanda de "Authorization".
  
@@ -221,7 +221,7 @@ Assim, você está authenticado, permitindo a realização de requisições para
 
 <p>Utilize algum aplicativo ou extensão do VSCode para realizar as requisições. </p>
 
-<p> Exemplo: ThunderClient, Insomnia, entre outros.</p>
+<p> Exemplo: ThunderClient, Insomnia.</p>
 
 ## Dependências:
 
