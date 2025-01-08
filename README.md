@@ -230,7 +230,7 @@ Com o seu Token gerado, antes de fazer a requisição para qualquer rota, você 
    <tr>
     <th>/user/:id</th>
     <td>Lista um usuário com id específico</td>
-    <td>GET</td>
+    <th>GET</th>
    </tr>
    
   </tbody>
