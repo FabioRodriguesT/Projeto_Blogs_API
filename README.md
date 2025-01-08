@@ -45,7 +45,7 @@ Para orientar a construção das tabelas através do ORM, utilize o DER a seguir
 
 ## Instalação:
 
-Para a configuração do projeto, siga esses passos:
+Para a configuração do projeto, siga os seguintes passos:
 
 <ol>
  <li>
@@ -100,7 +100,7 @@ Você pode então acessar a API em `http://localhost:3000` (ou utilizando sua po
    
 <li>
  <p>  
-  <strong>Acesse a Api:</strong>  Você pode acessar a API no caminho `http://localhost:3001` (ou utilizando sua porta específica).
+  <strong>Acesse a API:</strong>  Você pode acessar a API no caminho `http://localhost:3001` (ou utilizando sua porta específica).
  </p>
 
  </li>
@@ -117,7 +117,7 @@ Você pode então acessar a API em `http://localhost:3000` (ou utilizando sua po
 </ol>
 
 ## Instruções de utilização do projeto:
-- ⚠️ A maioria das rotas necessitam de um token gerado pela rota post de /login para authenticação.
+- ⚠️ A maioria das rotas necessitam de um token gerado pela rota POST de /login para authenticação.
 
 ### Gerando seu token:
 <ol>
@@ -146,7 +146,7 @@ Com o seu Token gerado, antes de fazer a requisição para qualquer rota, você 
 
 <ol>
  <li>Crie uma variavel em sua rota chamanda de "Authorization".</li>
- <li>Adicione o valor do seu token gerado na sua variavel Authorization, no formato de Bearer seu Token.</li>
+ <li>Adicione o valor do seu token gerado na sua variavel `Authorization/`,  `utilities/`, `sed, no formato de Bearer seu Token.</li>
  
 ```bash
   Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjo1LCJkaXNwbGF5TmFtZSI6InVzdWFyaW8gZGUgdGVzdGUiLCJlbWFpbCI6InRlc3RlQGVtYWlsLmNvbSIsImltYWdlIjoibnVsbCJ9LCJpYXQiOjE2MjAyNDQxODcsImV4cCI6MTYyMDY3NjE4N30.Roc4byj6mYakYqd9LTCozU1hd9k_Vw5IWKGL4hcCVG8
