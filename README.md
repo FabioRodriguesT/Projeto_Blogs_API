@@ -89,70 +89,54 @@ Você pode então acessar a API em `http://localhost:3000` (ou utilizando sua po
 
 ### Utilizando o Docker
 
-<ol>
- <li>
-  <p><strong>Construa e execute os contêineres do Docker:</strong></p>
+
+<strong>Construa e execute os contêineres do Docker:</strong>
   
-   ```bash
+```bash
    docker-compose up -d
-   ```
- </li>
-   
-<li>
- <p>  
-  <strong>Acesse a API:</strong>  Você pode acessar a API no caminho `http://localhost:3001` (ou utilizando sua porta específica).
- </p>
+```   
 
- </li>
+<strong>Acesse a API:</strong>  Você pode acessar a API no caminho `http://localhost:3000` (ou utilizando sua porta específica).
 
-<li>
- <p>
-  <strong>Acesse o container usando:</strong>  
- </p> 
- 
-   ```bash
-   docker exec -it blogs_api bash
-   ```
- </li>
-</ol>
+<strong>Acesse o container usando:</strong>  
+```bash
+docker exec -it blogs_api bash
+```
 
 ## Instruções de utilização do projeto:
 - ⚠️ A maioria das rotas necessitam de um token gerado pela rota POST de /login para authenticação.
 
 ### Gerando seu token:
-<ol>
- <li> Ao fazer uma requisição para a rota POST /login, com email e password, será gerado um token para você. Exemplo:</li>
 
- ```bash
- {
-  "email": "seuemail@exemplo.com",
-  "password": "suasenha"
- }
- ```
+Ao fazer uma requisição para a rota POST /login, com email e password, será gerado um token para você. Exemplo:
 
-<li> Ao realizar um login correto (como o exemplo), na rota, será retornado um token:</li>
-   </br>
-   <p>Exemplo:</p>
+```bash
+{
+ "email": "seuemail@exemplo.com",
+ "password": "suasenha"
+}
+```
+
+Ao realizar um login correto (como o exemplo), na rota, será retornado um token. Exemplo:
 
 ```bash
  {
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjo1LCJkaXNwbGF5TmFtZSI6InVzdWFyaW8gZGUgdGVzdGUiLCJlbWFpbCI6InRlc3RlQGVtYWlsLmNvbSIsImltYWdlIjoibnVsbCJ9LCJpYXQiOjE2MjAyNDQxODcsImV4cCI6MTYyMDY3NjE4N30.Roc4byj6mYakYqd9LTCozU1hd9k_Vw5I WKGL4hcCVG8"
  }
  ```
-</ol>
 
 ### Utilizando o token:
 Com o seu Token gerado, antes de fazer a requisição para qualquer rota, você deve utilizá-lo no header de sua requisição.
 
-<ol>
- <li>Crie uma variavel em sua rota chamanda de "Authorization".</li>
- <li>Adicione o valor do seu token gerado na sua variavel `Authorization/`,  `utilities/`, `sed, no formato de Bearer seu Token.</li>
+Crie uma variavel em sua rota chamanda de "Authorization".
+ 
+Adicione o valor do seu token gerado na sua variavel `Authorization`,  no formato de Bearer seu Token.
  
 ```bash
   Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjo1LCJkaXNwbGF5TmFtZSI6InVzdWFyaW8gZGUgdGVzdGUiLCJlbWFpbCI6InRlc3RlQGVtYWlsLmNvbSIsImltYWdlIjoibnVsbCJ9LCJpYXQiOjE2MjAyNDQxODcsImV4cCI6MTYyMDY3NjE4N30.Roc4byj6mYakYqd9LTCozU1hd9k_Vw5IWKGL4hcCVG8
 ```
- <li>Assim, você está authenticado, permitindo a realização de requisições para todos os endpoints!</li>
-</ol>
+Assim, você está authenticado, permitindo a realização de requisições para todos os endpoints!
+
 
 ### Rotas disponíveis:
 <ol>
