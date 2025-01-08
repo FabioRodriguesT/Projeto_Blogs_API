@@ -89,16 +89,15 @@ Você pode então acessar a API em `http://localhost:3000` (ou utilizando sua po
 
 ### Utilizando o Docker
 
-
-<strong>Construa e execute os contêineres do Docker:</strong>
+1. <strong>Construa e execute os contêineres do Docker:</strong>
   
 ```bash
    docker-compose up -d
 ```   
 
-<strong>Acesse a API:</strong>  Você pode acessar a API no caminho `http://localhost:3000` (ou utilizando sua porta específica).
+2. <strong>Acesse a API:</strong>  Você pode acessar a API no caminho `http://localhost:3000` (ou utilizando sua porta específica).
 
-<strong>Acesse o container usando:</strong>  
+3. <strong>Acesse o container usando:</strong>  
 ```bash
 docker exec -it blogs_api bash
 ```
