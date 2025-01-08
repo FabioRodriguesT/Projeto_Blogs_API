@@ -23,26 +23,23 @@ Para orientar a construção das tabelas através do ORM, utilize o DER a seguir
 
 ## Sobre o projeto:
 ### O que foi desenvolvido:
- <ol>  
-  <li><p>Endpoints que estão conectados ao banco de dados seguindo os princípios do REST.</p></li>
+
+- Endpoints conectados ao banco de dados, seguindo os princípios do REST.
+- 
+- Criação de um post, necessitando da relação entre usuário e login, sendo relação (1:N) entre user e blog_posts.
+- 
+- Separação dos posts por categorias, com a relação (N:N) de blog_posts para categories e de categories para blog_posts.
  
-  <li><p>Criação de um post, necessitando da relação entre usuário e login, sendo **relação (1:N) entre** `user` e `blog_posts`.</p></li>  
- 
-  <li><p>Separamos os post por categorias, com a **relação (N:N) de** `blog_posts` para `categories` e de `categories` para `blog_posts`.</p></li>
- 
-###Arquivos ou Pastas que foram desenvolvidos:
-   <ul>
-      <li>Controllers;</li>
-      <li>Middlewares;</li>
-      <li>Migrations;</li>
-      <li>Services;</li>
-      <li>Models;</li>
-      <li>Utils;</li>
-      <li>App.js</li>
-   </ul>
-   </p>
-  </li>
- </ol>
+### Arquivos ou Pastas que foram desenvolvidos:
+- Controller
+- Middlewares
+- Migrations
+- Services
+- Models
+- Utils
+- App.js
+
+
 
 #### :heavy_exclamation_mark:ATENÇÃO!:heavy_exclamation_mark:: Todos os arquivos que não foram mencionados, foram criados pela Trybe! :white_check_mark:
 
