@@ -1,9 +1,9 @@
 ## Descrição:
-**Blogs API** é uma API projetada para gerenciar postagens e categorias de blog. Permitindo que os usuários criem, leiam, atualizem e excluam postagens de blog. 
-Para criação das tabelas do banco de dados, utilizamos a técnica de Mapeamento Objeto-Relacional (ORM) através do pacote sequelize do Node.js e 
-a autenticação do usuário por meio de JSON Web Tokens (JWT).
-Também utilizamos a arquitetura de software MSC (Model-Service-Controller).
-Este projeto demonstra uma sólida compreensão do design de API RESTful e gerenciamento de banco de dados.
+**O projeto Blogs API é uma API desenvolvida para gerenciar postagens e categorias de blogs. 
+Ele permite que os usuários criem, leiam, atualizem e excluam postagens, com a criação das tabelas utilizando o Sequelize, um ORM para Node.js. 
+A autenticação dos usuários é feita via JSON Web Tokens (JWT), e a arquitetura segue o padrão Model-Service-Controller (MSC), 
+proporcionando uma estrutura clara e eficiente para a API.
+
 
 ## Sumário
 - [Diagrama de Entidade e Relacionamento](#Diagrama-de-Entidade-e-Relacionamento)
