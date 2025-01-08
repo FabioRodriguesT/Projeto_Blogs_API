@@ -25,9 +25,9 @@ Para orientar a construção das tabelas através do ORM, utilize o DER a seguir
 ### O que foi desenvolvido:
 
 - Endpoints conectados ao banco de dados, seguindo os princípios do REST.
-- 
+
 - Criação de um post, necessitando da relação entre usuário e login, sendo relação (1:N) entre user e blog_posts.
-- 
+ 
 - Separação dos posts por categorias, com a relação (N:N) de blog_posts para categories e de categories para blog_posts.
  
 ### Arquivos ou Pastas que foram desenvolvidos:
