@@ -170,61 +170,61 @@ Com o seu Token gerado, antes de fazer a requisição para qualquer rota, você 
    <tr>
     <th>/login</th>
     <td>Login na API com geração de token</td>
-    <td>POST</td>
+    <th>POST</th>
    </tr>
    
    <tr>
     <th>/user</th>
     <td>Cria um novo usuário</td>
-    <td>POST</td>
+    <th>POST</th>
    </tr>
    
    <tr>
     <th>/categories</th>
     <td>Cria uma nova categoria de Post</td>
-    <td>POST</td>
+    <th>POST</th>
    </tr>
   
    <tr>
     <th>/categories</th>
     <td>Lista todas as categorias</td>
-    <td>GET</td>
+    <th>GET</th>
    </tr>
   
    <tr>
     <th>/post</th>
     <td>Lista todos os posts</td>
-    <td>GET</td>
+    <th>GET</th>
    </tr> 
   
    <tr>
     <th>/post/:id</th>
     <td>Lista o post com o id específico</td>
-    <td>GET</td>
+    <th>GET</th>
    </tr>
   
    <tr>
     <th>/post</th>
     <td>Cria um novo post</td>
-    <td>POST</td>
+    <th>POST</th>
    </tr>
   
    <tr>
     <th>/post/:id</th>
     <td>Edita um post com o id específico</td>
-    <td>PUT</td>
+    <th>PUT</th>
    </tr>
   
    <tr>
     <th>/post/:id</th>
     <td>Exclui um post com o id específico</td>
-    <td>DELETE</td>
+    <th>DELETE</th>
    </tr>
   
    <tr>
     <th>/user</th>
     <td>Lista todos os usuários</td>
-    <td>GET</td>
+    <th>GET</th>
    </tr>  
   
    <tr>
