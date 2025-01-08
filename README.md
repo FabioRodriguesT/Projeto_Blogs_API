@@ -30,7 +30,7 @@ Para orientar a construção das tabelas através do ORM, utilize o DER a seguir
  
   <li><p>Separamos os post por categorias, com a **relação (N:N) de** `blog_posts` para `categories` e de `categories` para `blog_posts`.</p></li>
  
-  <li><p>Arquivos ou Pastas que foram desenvolvidos:
+###Arquivos ou Pastas que foram desenvolvidos:
    <ul>
       <li>Controllers;</li>
       <li>Middlewares;</li>
